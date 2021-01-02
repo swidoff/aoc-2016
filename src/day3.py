@@ -1,6 +1,5 @@
-from itertools import combinations
-from typing import List, Tuple
 import re
+from typing import List, Tuple
 
 
 def read_input() -> List[str]:
