@@ -18,6 +18,7 @@ part1_pad = {
     (2, 2): "9",
 }
 
+
 def buttons_for(lines: List[str], pad: Mapping[Tuple[int, int], str], row_start: int, col_start: int) -> Iterator[str]:
     row, col = row_start, col_start
     for line in lines:
@@ -58,15 +59,23 @@ part2_pad = {
     (4, 2): "D",
 }
 
+
 def part2(lines: List[str]) -> str:
     return "".join(buttons_for(lines, part2_pad, 2, 0))
 
 
 def test_part1_example():
-    assert part1("""ULL
+    assert (
+        part1(
+            """ULL
 RRDDD
 LURDL
-UUUUD""".split("\n")) == "1985"
+UUUUD""".split(
+                "\n"
+            )
+        )
+        == "1985"
+    )
 
 
 def test_part1():
@@ -74,10 +83,17 @@ def test_part1():
 
 
 def test_part2_example():
-    assert part2("""ULL
+    assert (
+        part2(
+            """ULL
 RRDDD
 LURDL
-UUUUD""".split("\n")) == "5DB3"
+UUUUD""".split(
+                "\n"
+            )
+        )
+        == "5DB3"
+    )
 
 
 def test_part2():
