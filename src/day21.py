@@ -1,5 +1,5 @@
-from typing import List, Tuple
 import re
+from typing import List
 
 
 def read_input() -> List[str]:
